@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito+Sans&display=swap');
+
+@font-face {
+  font-family: Neue;
+  src: url(/NeueMachina-Regular.otf);
+}
 
 * {
   margin: 0;
@@ -32,13 +38,29 @@ select {
 /* colors  */
 
 :root {
+
+  /* fonts */
+  --ff-nunito: 'Nunito Sans', sans-serif;
+  --ff-ibm-plex: 'IBM Plex Sans',sans-serif;
+
+
   /* primary */
-  --cyan: hsl(177, 68%, 64%);
+  /* --cyan: hsl(177, 68%, 64%);
   --red: hsla(12, 94%, 65%, 1);
-  --orange: hsla(33, 100%, 70%, 1);
+  --orange: hsla(33, 100%, 70%, 1); */
   --white: hsla(20, 33%, 98%, 1);
   --black: hsla(244, 23%, 12%, 1);
-}
+
+  /* new colors */
+  --rich-black: hsla(207, 43%, 9%, 1);
+  --cream: hsla(69, 93%, 88%, 1);
+  --gray: hsla(190, 10%, 48%, 1);
+  --black-olive: hsla(90, 26%, 12%, 1);
+  --beige: hsla(76, 57%, 91%, 1);
+  --off-white: #FAFAFA;
+
+  --gradient: gradient-top: linear-gradient(0deg, #0d1821ff, #f5fdc6ff, #6e8387ff, #1f2717ff, #eef5dbff);
+  }
 
 body {
   display: flex;
@@ -46,9 +68,9 @@ body {
   min-height: 100vh;
   line-height: 1.3;
   text-rendering: optimizeSpeed;
-  font-family: 'IBM Plex Sans',
-    sans-serif;
-  background-image: url(./assets/bg-pattern-1.svg), url(./assets/bg-main-desktop.png);
+  font-family: var(--ff-nunito);
+  background-image: url(./assets/pattern-bg-me.svg), url(./assets/bg-main-desktop.png);
+  background-color: var(--rich-black);
   background-repeat: no-repeat;
   background-size: 275px, auto;
   background-position: right top -40px, top -368px left -254px;
@@ -59,9 +81,6 @@ header {
   padding-top: 2.5rem;
 }
 
-.logo {
-  transition: ease-in-out 0.2s;
-}
 
 .logo:hover {
   filter: invert(55%) sepia(62%) saturate(1642%) hue-rotate(327deg) brightness(103%) contrast(96%);
@@ -70,6 +89,8 @@ header {
 
 .logo {
   padding: 12px 0;
+
+  transition: ease-in-out 0.2s;
 }
 
 h1,
@@ -79,11 +100,14 @@ h1,
   letter-spacing: -1px;
   max-width: 20ch;
   /* height: 184px; */
+  font-weight: 900;
+
+  color: var(--off-white);
 }
 
 /* animated gradient text */
 .gradient-text {
-  background-image: linear-gradient(90deg, #66E2DC 0%, #FA7453 25%, #6edeff 50%, #ff4d00 75%, #66E2DC 100%);
+  background-image: linear-gradient(90deg, #0d1821ff, #f5fdc6ff, #6e8387ff, #1f2717ff, #eef5dbff);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -118,7 +142,7 @@ h1,
   font-size: 20px;
   line-height: 1.5;
   max-width: 70ch;
-  color: var(--black);
+  color: var(--beige);
   padding-top: 2.5rem;
   padding-bottom: 340px;
 }
@@ -130,7 +154,9 @@ h1,
   padding: 0 104px;
   align-items: center;
   color: var(--white);
-  background: var(--black) url(./assets/bg-pattern-2.svg) no-repeat left 338px top;
+  text-shadow: 0 0 1px var(--black);
+  background: var(--gray) url(./assets/design-3-box.svg) no-repeat left 338px top;
+  box-shadow: rgba(96, 96, 98, 0.379) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .phone {
@@ -149,9 +175,10 @@ h1,
 
 .card {
   padding: 4.125rem 3.5rem 2.75rem 3.5em;
-  background-color: var(--red);
+  background-color: var(--black-olive);
   transform: translateY(90px);
   border-radius: 12px;
+  box-shadow: rgba(78, 78, 88, 0.335) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .card h2 {
@@ -252,7 +279,7 @@ footer {
   font-weight: 400;
   font-size: 1rem;
   transform: translateX(-300px);
-  color: var(--black);
+  color: var(--beige);
 }
 
 .social-icon img {
