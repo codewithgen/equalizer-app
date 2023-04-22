@@ -22,7 +22,7 @@ This is a website refresh/revamp to change the design and branding.
 
 ## Screenshots
 
-!["See example of finished product"](/video-screen.mov)
+!["See example of finished product"](https://media.giphy.com/media/auxq8zJg8yAkYgr0D7/giphy.gif)
 
 
 ## What I learn
