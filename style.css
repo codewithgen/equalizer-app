@@ -167,7 +167,7 @@ h1,
 }
 
 .phone:hover {
-  filter: hue-rotate(190deg) saturate(3);
+  filter: hue-rotate(250deg) saturate(3);
   transition: ease-in-out 0.2s;
 }
 
@@ -186,6 +186,7 @@ h1,
   font-size: 40px;
   line-height: 52px;
   padding-bottom: 28px;
+  font-family: 'Neue';
 }
 
 .card-p {
@@ -221,6 +222,10 @@ h1,
   height: 100%;
 }
 
+.icon-button:hover {
+  filter: invert(100%);
+}
+
 .btn-ios,
 .btn-android {
   display: flex;
@@ -241,7 +246,10 @@ h1,
 }
 
 .btn-ios:hover {
-  background-color: var(--cyan);
+  /* background-color: var(--cream);
+  color: var(--rich-black); */
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 19px rgba(255, 255, 255, 0.22) 0.22) 0px 15px 12px;
+  filter: invert(75%) saturate(3);
 }
 
 .btn-android {
@@ -250,7 +258,10 @@ h1,
 }
 
 .btn-android:hover {
-  background-color: var(--orange);
+  /* background-color: var(--rich-black);
+  color: var(--cream); */
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 19px 38px, rgba(255, 255, 255, 0.22) 0px 15px 12px;
+  filter: invert(75%) saturate(3);
 }
 
 /* footer */
@@ -296,13 +307,19 @@ ul {
   list-style-type: none;
 }
 
-.social-icon {
-  display: flex;
-  gap: 20px;
+.fa-brands {
+  padding: 10px;
 }
 
-.social-icon img {
-  height: 24px;
+.fa-brands:hover {
+  box-shadow: rgba(169, 167, 167, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background: var(--gray);
+  padding: 18px;
+  border-radius: 15px;
+}
+
+.social-icon {
+  display: flex;
 }
 
 @media (max-width: 1300px) {
@@ -375,7 +392,7 @@ ul {
 
     .app {
       padding: 0 20px;
-      background: var(--black) url(./assets/bg-pattern-2.svg) no-repeat left 50% top;
+      background: var(--black) url(./assets/design-3-box.svg) no-repeat left 50% top;
     }
   }
 
